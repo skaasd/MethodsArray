@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=s, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <script defer src="./assets/js/main.js"></script>
+    <title>To-Do List</title>
 </head>
 
 <body>
+    <main id="content">
+        <h1>To-do list</h1>
 
+        <hr />
+
+        <section id="addTareaContent" aria-labelledby="nueva-tarea-titulo">
+            <h2 id="nueva-tarea-titulo" class="sr-only">Nueva tarea</h2>
+            <label for="inputTarea"></label>
+            <input id="inputTarea" type="text" placeholder="Escribe una tarea..." />
+            <button id="btnAgregar" type="button">Agregar</button>
+        </section>
+
+
+        <div class="tareasContent">
+            <div id="statsContent">
+                <div>Total: <span id="totalTareas">0</span></div>
+                <div>Realizadas: <span id="totalRealizadas">0</span></div>
+            </div>
+
+            <div class="listBox">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tarea</th>
+                            <th>Completada</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </main>
 </body>
 
 </html>

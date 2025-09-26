@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #fff;
+  padding: 24px;
+}
+
+#content {
+  width: clamp(320px, 60vw, 900px);
+  background: #e9e9ea; /* gris claro como en la imagen */
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Header: input + botón verde */
+#addTareaContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+#inputTarea {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: #fff;
+}
+#btnAgregar {
+  background: #198754; /* verde Bootstrap-like */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+#btnAgregar:hover {
+  filter: brightness(0.95);
+}
+
+/* Stats + lista al estilo de la imagen */
+.tareasContent {
+  display: grid;
+  grid-template-columns: 160px 1fr; /* stats a la izquierda, lista a la derecha */
+  gap: 16px;
+  align-items: start;
+}
+
+#statsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+}
+
+/* Recuadro rojo de la lista */
+.listBox {
+  border: 2px solid #c0392b; /* rojo del borde */
+  border-radius: 8px;
+  background: transparent;
+  padding: 10px 12px;
+  width: 70%; /* más angosto como en tu captura */
+  margin-left: auto; /* pega la caja a la derecha */
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+thead th {
+  background: #f3f3f3;
+  text-align: left;
+}
+th,
+td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Botón eliminar como X roja */
+.btn-borrar {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: #8b0000;
+  font-weight: 700;
+}
+.btn-borrar:hover {
+  color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Tachado cuando está realizada (si quieres) */
+.done {
+  text-decoration: line-through;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .tareasContent {
+    grid-template-columns: 1fr;
+  }
+  .listBox {
+    width: 100%;
+    margin-left: 0;
+  }
+}
