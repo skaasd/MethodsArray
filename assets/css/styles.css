@@ -7,14 +7,14 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background: #fff;
   padding: 24px;
 }
 
 #content {
   width: clamp(320px, 60vw, 900px);
-  background: #e9e9ea; /* gris claro como en la imagen */
+  background: #e9e9ea; 
   border: 1px solid #333;
   border-radius: 12px;
   padding: 20px;
